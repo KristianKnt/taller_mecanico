@@ -1,5 +1,5 @@
 <?php
-$host = "node82985-env-1641810.whelastic.ne";
+$host = 'node82985-env-1641810.whelastic.ne';
 $dbuser = 'root';
 $dbpass = 'ZCTixg17914';
 $dbname = 'taller_mecanico';
