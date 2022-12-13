@@ -429,7 +429,7 @@ echo $num;
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-                   <a href="https://ventas.programacionparacompartir.com/">Taller mecanico tusulutionweb Sys</a>
+                   <a href="https://www.facebook.com/taller.delvolante/">Taller al volante</a>
           </div>
           <div class="clearfix"></div>
         </footer>
