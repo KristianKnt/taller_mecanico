@@ -24,7 +24,7 @@ if (!$con)
   date_default_timezone_set("America/Bogota"); 
 
 
-
+/*
   try{
 	$base_de_datos = new PDO('mysql:host=localhost;dbname=' . $dbname, $dbuser, $dbpass);
 	 $base_de_datos->query("set names utf8;");
@@ -34,6 +34,7 @@ if (!$con)
 }catch(Exception $e){
 	echo "Ocurrió algo con la base de datos: " . $e->getMessage();
 }
+*/
 ?>
 
 
