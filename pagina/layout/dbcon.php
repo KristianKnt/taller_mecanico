@@ -1,7 +1,17 @@
 <?php
+
+/* hecgo para webhosting
 $host = 'node82985-env-1641810.whelastic.ne';
 $dbuser = 'root';
 $dbpass = 'ZCTixg17914';
+$dbname = 'taller_mecanico';
+$con = mysqli_connect($host,$dbuser,$dbpass,$dbname);
+*/
+
+//hecho para jlastic
+$host = 'node122447-env-2831420.jelastic.saveincloud.net';
+$dbuser = 'root';
+$dbpass = 'GZQfet63329';
 $dbname = 'taller_mecanico';
 $con = mysqli_connect($host,$dbuser,$dbpass,$dbname);
 

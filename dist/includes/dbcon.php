@@ -1,10 +1,19 @@
 <?php
+
+/* hecgo para webhosting
 $host = 'node82985-env-1641810.whelastic.ne';
 $dbuser = 'root';
 $dbpass = 'ZCTixg17914';
 $dbname = 'taller_mecanico';
 $con = mysqli_connect($host,$dbuser,$dbpass,$dbname);
+*/
 
+//hecho para jlastic
+$host = 'node122447-env-2831420.jelastic.saveincloud.net';
+$dbuser = 'root';
+$dbpass = 'GZQfet63329';
+$dbname = 'taller_mecanico';
+$con = mysqli_connect($host,$dbuser,$dbpass,$dbname);
 
 // Check connection
 if (mysqli_connect_errno())
@@ -12,7 +21,7 @@ if (mysqli_connect_errno())
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
 
-  date_default_timezone_set("Asia/Manila"); 
+  date_default_timezone_set("America/Bogota"); 
 
 
 
