@@ -10,7 +10,7 @@ $con = mysqli_connect($host,$dbuser,$dbpass,$dbname);
 
 //hecho para jlastic node122447-env-2831420.jelastic.saveincloud.net
 // cambio del host
-$host = '127.0.0.1';
+$host = 'jdbc:mariadb://node122447-env-2831420.jelastic.saveincloud.net';
 $dbuser = 'root';
 $dbpass = 'GZQfet63329';
 $dbname = 'taller_mecanico';
