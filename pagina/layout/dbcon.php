@@ -1,7 +1,7 @@
 <?php
-$host = "localhost";
+$host = "node82985-env-1641810.whelastic.ne";
 $dbuser = 'root';
-$dbpass = 'k5eIg7fogG';
+$dbpass = 'ZCTixg17914';
 $dbname = 'taller_mecanico';
 $con = mysqli_connect($host,$dbuser,$dbpass,$dbname);
 

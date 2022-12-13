@@ -1,8 +1,9 @@
 <?php
-$dbuser = 'Camilo';
-$dbpass = 'Holamund0';
+$host = "node82985-env-1641810.whelastic.ne";
+$dbuser = 'root';
+$dbpass = 'ZCTixg17914';
 $dbname = 'taller_mecanico';
-$con = mysqli_connect("localhost",$dbuser,$dbpass,$dbname);
+$con = mysqli_connect($host,$dbuser,$dbpass,$dbname);
 
 
 // Check connection
