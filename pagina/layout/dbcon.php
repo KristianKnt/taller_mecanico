@@ -8,8 +8,8 @@ $dbname = 'taller_mecanico';
 $con = mysqli_connect($host,$dbuser,$dbpass,$dbname);
 */
 
-//hecho para jlastic
-$host = 'node122447-env-2831420.jelastic.saveincloud.net';
+//hecho para jlastic node122447-env-2831420.jelastic.saveincloud.net
+$host = '127.0.0.1';
 $dbuser = 'root';
 $dbpass = 'GZQfet63329';
 $dbname = 'taller_mecanico';
