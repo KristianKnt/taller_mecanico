@@ -1,8 +1,9 @@
 <?php
-$dbuser = 'Camilo';
-$dbpass = 'Holamund0';
+$host = "localhost";
+$dbuser = 'root';
+$dbpass = 'k5eIg7fogG';
 $dbname = 'taller_mecanico';
-$con = mysqli_connect("localhost",$dbuser,$dbpass,$dbname);
+$con = mysqli_connect($host,$dbuser,$dbpass,$dbname);
 
 
 
