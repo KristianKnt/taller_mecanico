@@ -2,7 +2,7 @@
               
 
 
-              <a data-toggle="tooltip" data-placement="top" href = "logout.php" title="Logout">
+              <a data-toggle="tooltip" data-placement="top" href = "../layout/logout.php" title="Logout">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
  </div>
