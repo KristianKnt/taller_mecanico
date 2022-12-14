@@ -20,7 +20,7 @@ if (!$con)
   {
   die("Failed to connect to MySQL: " . mysql_error());
   }
-  echo "Conexion Establecida";
+  // echo "Conexion Establecida";
   date_default_timezone_set("America/Bogota"); 
 
 
