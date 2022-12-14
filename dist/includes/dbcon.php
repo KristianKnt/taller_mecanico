@@ -1,20 +1,30 @@
 <?php
-$dbuser = 'Camilo';
-$dbpass = 'Holamund0';
-$dbname = 'taller_mecanico';
-$con = mysqli_connect("localhost",$dbuser,$dbpass,$dbname);
 
+/* hecgo para webhosting
+$host = 'node82985-env-1641810.whelastic.ne';
+$dbuser = 'root';
+$dbpass = 'ZCTixg17914';
+$dbname = 'taller_mecanico';
+$con = mysqli_connect($host,$dbuser,$dbpass,$dbname);
+*/
+
+//hecho para jlastic
+$host = 'node122447-env-2831420.jelastic.saveincloud.net';
+$dbuser = 'root';
+$dbpass = 'GZQfet63329';
+$dbname = 'taller_mecanico';
+$con = mysqli_connect($host,$dbuser,$dbpass,$dbname);
 
 // Check connection
-if (mysqli_connect_errno())
+if (!$con)
   {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  die("Failed to connect to MySQL: " . mysql_error());
   }
+  // echo "Conexion Establecida";
+  date_default_timezone_set("America/Bogota"); 
 
-  date_default_timezone_set("Asia/Manila"); 
 
-
-
+/*
   try{
 	$base_de_datos = new PDO('mysql:host=localhost;dbname=' . $dbname, $dbuser, $dbpass);
 	 $base_de_datos->query("set names utf8;");
@@ -24,6 +34,7 @@ if (mysqli_connect_errno())
 }catch(Exception $e){
 	echo "Ocurrió algo con la base de datos: " . $e->getMessage();
 }
+*/
 ?>
 
 

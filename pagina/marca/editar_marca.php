@@ -179,7 +179,7 @@ ul {
         <!-- footer content -->
      <footer>
           <div class="pull-right">
-                 <a href="https://ventas.programacionparacompartir.com/">Taller mecanico tusulutionweb Sys</a>
+                 
           </div>
           <div class="clearfix"></div>
         </footer>

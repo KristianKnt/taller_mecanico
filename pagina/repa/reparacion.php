@@ -265,7 +265,7 @@ function Buscar() {
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-             <a href="https://ventas.programacionparacompartir.com/">el contaador tusulutionweb Sys</a>
+             <a href="https://www.instagram.com/tallermecanico.alvarez/">el contaador tusulutionweb Sys</a>
           </div>
           <div class="clearfix"></div>
         </footer>

@@ -55,14 +55,14 @@
                 <label>Usuario:</label>
                 <div class="group">
                     <i class="fas fa-user"></i>
-                    <input type="text" class="form-control" placeholder="Usuario"  name="username" value="admin" required="required" />
+                    <input type="text" class="form-control" placeholder="Usuario"  name="username" value="" required="required" />
                 </div>
             </div>
             <div class=" w3l-form-group">
                 <label>Password:</label>
                 <div class="group">
                     <i class="fas fa-unlock"></i>
-                    <input type="password" class="form-control" placeholder="Password" name="password" value="admin" required="required" />
+                    <input type="password" class="form-control" placeholder="Password" name="password" value="" required="required" />
                 </div>
             </div>
             <div class="forgot">
