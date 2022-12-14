@@ -229,7 +229,7 @@ if ($tipo_comprobante=="Ticket") {
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-             <a href="https://ventas.programacionparacompartir.com/">ventas  tusulutionweb Sys</a>
+             <a href="https://www.instagram.com/tallermecanico.alvarez/">ventas  tusulutionweb Sys</a>
           </div>
           <div class="clearfix"></div>
         </footer>
