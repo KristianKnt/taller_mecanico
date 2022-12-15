@@ -17,14 +17,14 @@ $dbpass = 'GZQfet63329';
 $dbname = 'taller_mecanico';
 $con = mysqli_connect($host, $dbuser, $dbpass, $dbname);
 
-
-// para tranajar en local
+/*
+ para tranajar en local
 $host = 'localhost';
 $dbuser = 'Camilo';
 $dbpass = 'Holamund0';
 $dbname = 'taller_mecanico';
 $con = mysqli_connect($host, $dbuser, $dbpass, $dbname);
-
+*/
 
 
 
