@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 5.2.0-1.el7.remi
+-- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 21-07-2020 a las 16:45:42
--- Versión del servidor: 10.1.19-MariaDB
--- Versión de PHP: 5.6.28
+-- Servidor: localhost
+-- Tiempo de generación: 15-12-2022 a las 16:41:06
+-- Versión del servidor: 10.4.25-MariaDB
+-- Versión de PHP: 7.4.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `taller_mecanico`
 --
+CREATE DATABASE IF NOT EXISTS `taller_mecanico` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `taller_mecanico`;
 
 -- --------------------------------------------------------
 
@@ -39,7 +42,7 @@ CREATE TABLE `caja` (
 --
 
 INSERT INTO `caja` (`id_caja`, `estado`, `monto`, `fecha_apertura`, `fecha_cierre`) VALUES
-(3, 'abierto', '233', '2020-07-21', '0000-00-00');
+(4, 'cerrado', '5000000', '2022-12-09', '2022-12-09');
 
 -- --------------------------------------------------------
 
@@ -61,8 +64,13 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id_cliente`, `nombre`, `documento`, `telefono`, `correo`, `estado`) VALUES
-(1, 'juan soviesky', '242423', '23343', 'soviesky@gmail.com', 'a'),
-(2, 'Pedro', '243234', '2342342', 'pedro@gmail.com', 'a');
+(8, 'Miguel Angel Rojas Capera', '1013036054', '3148522900', 'miguelrojas777@gmail.com', 'a'),
+(9, 'Angie Carolina Quiroz Sierra', '9874', '30148484', 'carolina@gmail.com', 'a'),
+(10, 'Angie Katherine Forero Ruiz', '85652', '54545', 'angie@gmail.com', 'a'),
+(11, 'Evelia Gomez Riaño', '98565', '3148693230', 'evrg1@gmail.com', 'a'),
+(12, 'Duberney Chavista Chiguasuque', '645684864', '54684/8', 'dney@hotmail.es', 'a'),
+(13, 'Jhonatan Ferney Ayala', '84198189', '652165', 'jhonatan180@hotmail.es', 'a'),
+(14, 'Johann Sebastian Zarate Rodriguez', '489489', '984984', 'nomelose@gmail.com', 'a');
 
 -- --------------------------------------------------------
 
@@ -76,13 +84,6 @@ CREATE TABLE `detalles_pedido` (
   `id_producto` int(200) NOT NULL,
   `cantidad` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `detalles_pedido`
---
-
-INSERT INTO `detalles_pedido` (`id_detalles`, `id_reparacion`, `id_producto`, `cantidad`) VALUES
-(2, '4', 2, '1');
 
 -- --------------------------------------------------------
 
@@ -109,7 +110,7 @@ CREATE TABLE `empresa` (
 --
 
 INSERT INTO `empresa` (`id_empresa`, `empresa`, `ruc`, `direccion`, `telefono`, `descripcion`, `imagen`, `correo`, `simbolo_moneda`, `impuesto`, `tipo_moneda`) VALUES
-(1, 'Taller tusolutionweb', '4324', 'av san marino', '242432334', 'empresa de prestamos', 'logo.jpg', 'tusolutionweb@gmail.com', '$./', 18, 'nuevo sol');
+(1, 'Taller al volante', '921000000-8', 'Calle 80 # 91-02', '95481', 'Taller mecanico para carros ', 'logo de la empresa.png', 'nomanejacorreo@gmail.com', '$', 19, 'Pesos Colombianos');
 
 -- --------------------------------------------------------
 
@@ -275,7 +276,64 @@ INSERT INTO `history_log` (`log_id`, `user_id`, `action`, `date`) VALUES
 (152, 5, 'se ha desconectado el sistema en ', '2020-04-13 11:33:15'),
 (153, 5, 'se ha desconectado el sistema en ', '2020-04-13 11:52:17'),
 (154, 5, 'se ha desconectado el sistema en ', '2020-04-13 11:52:38'),
-(155, 5, 'se ha desconectado el sistema en ', '2020-07-21 22:45:16');
+(155, 5, 'se ha desconectado el sistema en ', '2020-07-21 22:45:16'),
+(156, 5, 'se ha desconectado el sistema en ', '2022-12-08 03:12:08'),
+(157, 5, 'se ha desconectado el sistema en ', '2022-12-08 03:12:46'),
+(158, 5, 'se ha desconectado el sistema en ', '2022-12-08 03:45:54'),
+(159, 9, 'se ha desconectado el sistema en ', '2022-12-08 03:47:48'),
+(160, 5, 'se ha desconectado el sistema en ', '2022-12-09 00:35:33'),
+(161, 5, 'se ha desconectado el sistema en ', '2022-12-09 00:39:36'),
+(162, 5, 'se ha desconectado el sistema en ', '2022-12-09 00:39:48'),
+(163, 5, 'se ha desconectado el sistema en ', '2022-12-09 07:32:57'),
+(164, 9, 'se ha desconectado el sistema en ', '2022-12-09 09:10:10'),
+(165, 9, 'se ha desconectado el sistema en ', '2022-12-09 10:36:00'),
+(166, 5, 'se ha desconectado el sistema en ', '2022-12-10 06:16:39'),
+(167, 5, 'se ha desconectado el sistema en ', '2022-12-10 07:46:47'),
+(168, 5, 'se ha desconectado el sistema en ', '2022-12-10 07:48:49'),
+(169, 9, 'se ha desconectado el sistema en ', '2022-12-10 07:50:49'),
+(170, 5, 'se ha desconectado el sistema en ', '2022-12-10 07:52:15'),
+(171, 9, 'se ha desconectado el sistema en ', '2022-12-10 07:52:20'),
+(172, 9, 'se ha desconectado el sistema en ', '2022-12-12 06:23:28'),
+(173, 5, 'se ha desconectado el sistema en ', '2022-12-12 06:24:17'),
+(174, 5, 'se ha desconectado el sistema en ', '2022-12-12 07:42:47'),
+(175, 5, 'se ha desconectado el sistema en ', '2022-12-12 07:42:53'),
+(176, 5, 'se ha desconectado el sistema en ', '2022-12-13 02:49:59'),
+(177, 5, 'se ha desconectado el sistema en ', '2022-12-13 13:27:19'),
+(178, 9, 'se ha desconectado el sistema en ', '2022-12-13 13:27:51'),
+(179, 5, 'se ha desconectado el sistema en ', '2022-12-13 13:29:08'),
+(180, 5, 'se ha desconectado el sistema en ', '2022-12-13 13:30:13'),
+(181, 9, 'se ha desconectado el sistema en ', '2022-12-13 13:30:33'),
+(182, 5, 'se ha desconectado el sistema en ', '2022-12-13 13:34:12'),
+(183, 5, 'se ha desconectado el sistema en ', '2022-12-13 13:39:38'),
+(184, 11, 'se ha desconectado el sistema en ', '2022-12-13 13:41:48'),
+(185, 5, 'se ha desconectado el sistema en ', '2022-12-13 13:45:29'),
+(186, 5, 'se ha desconectado el sistema en ', '2022-12-13 14:06:58'),
+(187, 9, 'se ha desconectado el sistema en ', '2022-12-13 14:13:55'),
+(188, 5, 'se ha desconectado el sistema en ', '2022-12-13 14:15:15'),
+(189, 5, 'se ha desconectado el sistema en ', '2022-12-13 14:15:30'),
+(190, 5, 'se ha desconectado el sistema en ', '2022-12-13 14:46:07'),
+(191, 5, 'se ha desconectado el sistema en ', '2022-12-13 15:00:20'),
+(192, 12, 'se ha desconectado el sistema en ', '2022-12-13 15:14:41'),
+(193, 12, 'se ha desconectado el sistema en ', '2022-12-13 15:19:21'),
+(194, 5, 'se ha desconectado el sistema en ', '2022-12-13 15:27:34'),
+(195, 9, 'se ha desconectado el sistema en ', '2022-12-13 16:31:39'),
+(196, 5, 'se ha desconectado el sistema en ', '2022-12-13 18:09:49'),
+(197, 5, 'se ha desconectado el sistema en ', '2022-12-13 20:36:04'),
+(198, 5, 'se ha desconectado el sistema en ', '2022-12-13 20:55:26'),
+(199, 5, 'se ha desconectado el sistema en ', '2022-12-13 20:57:51'),
+(200, 5, 'se ha desconectado el sistema en ', '2022-12-13 20:58:01'),
+(201, 9, 'se ha desconectado el sistema en ', '2022-12-14 00:11:04'),
+(202, 9, 'se ha desconectado el sistema en ', '2022-12-14 00:13:47'),
+(203, 9, 'se ha desconectado el sistema en ', '2022-12-14 02:02:18'),
+(204, 5, 'se ha desconectado el sistema en ', '2022-12-14 13:10:22'),
+(205, 5, 'se ha desconectado el sistema en ', '2022-12-14 13:22:34'),
+(206, 5, 'se ha desconectado el sistema en ', '2022-12-14 14:39:10'),
+(207, 5, 'se ha desconectado el sistema en ', '2022-12-14 14:46:13'),
+(208, 5, 'se ha desconectado el sistema en ', '2022-12-14 14:46:28'),
+(209, 9, 'se ha desconectado el sistema en ', '2022-12-14 17:25:35'),
+(210, 5, 'se ha desconectado el sistema en ', '2022-12-15 09:48:55'),
+(211, 9, 'se ha desconectado el sistema en ', '2022-12-15 09:50:37'),
+(212, 5, 'se ha desconectado el sistema en ', '2022-12-15 09:51:29');
 
 -- --------------------------------------------------------
 
@@ -294,7 +352,20 @@ CREATE TABLE `marca` (
 --
 
 INSERT INTO `marca` (`id_marca`, `nombre_marca`, `estado`) VALUES
-(4, 'toyota', 'a');
+(9, 'susuki', 'a'),
+(10, 'mazda', 'a'),
+(11, 'nissan', 'a'),
+(12, 'honda', 'a'),
+(13, 'kawasaki', 'a'),
+(14, 'husvarna', 'a'),
+(15, 'duke', 'a'),
+(16, 'honda', 'a'),
+(17, 'yamaha', 'a'),
+(18, 'chevrolet', 'a'),
+(19, 'mitsubishi', 'a'),
+(20, 'toyota', 'a'),
+(21, 'Ford', 'a'),
+(22, 'Tesla motors', 'a');
 
 -- --------------------------------------------------------
 
@@ -314,7 +385,32 @@ CREATE TABLE `modelo` (
 --
 
 INSERT INTO `modelo` (`id_modelo`, `nombre_modelo`, `id_marca`, `estado`) VALUES
-(4, 'corola', 4, 'a');
+(7, '2000', 9, 'a'),
+(8, '2001', 9, 'a'),
+(9, '2002', 9, 'a'),
+(10, '2003', 9, 'a'),
+(11, '2004', 9, 'a'),
+(12, '2005', 9, 'a'),
+(13, '2006', 9, 'a'),
+(14, '2007', 9, 'a'),
+(15, '2008', 9, 'a'),
+(16, '1995', 10, 'a'),
+(17, '1994', 9, 'a'),
+(18, '1996', 10, 'a'),
+(19, '2000', 10, 'a'),
+(20, '1982', 11, 'a'),
+(21, '2000', 11, 'a'),
+(22, '2010', 11, 'a'),
+(23, '2015', 11, 'a'),
+(24, '2010', 12, 'a'),
+(25, '2000', 12, 'a'),
+(26, '1985', 12, 'a'),
+(27, '1975', 17, 'a'),
+(28, '2022', 14, 'a'),
+(29, '2018', 15, 'a'),
+(30, '1999', 17, 'a'),
+(31, '2000', 17, 'a'),
+(32, '2014', 17, 'a');
 
 -- --------------------------------------------------------
 
@@ -352,7 +448,11 @@ CREATE TABLE `producto` (
 --
 
 INSERT INTO `producto` (`id_pro`, `nombre_pro`, `descripcion`, `unidad`, `precio_venta`, `imagen`, `stock`, `estado`) VALUES
-(2, 'filtro aire toyota', 'sdfsdf', 'filtro', '40', '', '10', 'a');
+(5, 'Turbo compresor', 'turbo compresor para elevar la potencia o hp', '1', '5000000', 'turbo.jpg', '100', 'a'),
+(6, 'Diferencia ', 'diferencia para camiontea', '1', '3000000', 'diferencial.png', '2', 'a'),
+(7, 'biela', 'juegos de bielas para conjunto del motor ', '6', '500000', 'Biela-Motor-Coche-1.jpg', '60', 'a'),
+(8, 'piston', 'piston para usar con la biela', '6', '400000', 'pistón.png', '60', 'a'),
+(9, 'bloque del motor', 'se complementa el bloque de motor con la culata piston bielas y demas partes para su intalacion correcta por parte de un mecanico con conocimeintos', '1', '90000000', 'bloque.png', '2', 'a');
 
 -- --------------------------------------------------------
 
@@ -383,7 +483,9 @@ CREATE TABLE `reparacion` (
 --
 
 INSERT INTO `reparacion` (`id_reparacion`, `id_marca`, `id_modelo`, `id_usuario`, `placa`, `codigo_registro`, `fallas`, `revision_componentes`, `fecha_estimada`, `hora_reparacion`, `cliente`, `fecha_registro`, `precio_estimado`, `tipo_comprobante`, `estado_reparacion`) VALUES
-(4, 4, 4, 5, '23424', '234234', 'fdsfsdfsfds', 'sdfsdfs', '2020-07-22', '10am', 1, '2020-07-21', 400, 'Boleta', 'transito');
+(12, 9, 15, 5, 'qwe87s', '123', 'qwe', '123', '2022-12-22', '12', 8, '2022-12-14', 250000, 'Factura', 'reparado'),
+(13, 14, 28, 5, '9', '2134', '2', '', '2022-12-29', '', 14, '2022-12-14', 10000, 'Factura', 'transito'),
+(14, 17, 31, 5, 'QWEZX3', '25', 'Cambio aceite', 'Motor', '2022-12-16', '12', 8, '2022-12-15', 350000, 'Factura', 'transito');
 
 -- --------------------------------------------------------
 
@@ -408,20 +510,20 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id`, `usuario`, `password`, `imagen`, `tipo`, `nombre`, `apellido`, `telefono`, `correo`) VALUES
-(5, 'admin', 'a1Bz20ydqelm8m1wql21232f297a57a5a743894a0e4a801fc3', 'logo.jpg', 'administrador', 'sf', 'fdf', '54345', 'tusolutionweb@gmail.com'),
-(6, 'siba', 'a1Bz20ydqelm8m1wqlc3fb6589eda475c8887beffb013fbf0b', '', 'administrador', 'siba', 'siba', '2342423', 'siba@gmail.com'),
-(7, 'federico', 'a1Bz20ydqelm8m1wql616706c4d6f7bdf68b30893f860cbb2b', '', 'administrador', 'federico', 'federico', 'federico', 'federico@gmail.com'),
-(8, 'worrent', 'a1Bz20ydqelm8m1wql1574612a64e746d204acae6e51b7d695', '', 'empleado', 'worrent', 'yafe', '3253453453', 'worrent@gmail.com');
+(5, 'admin', 'a1Bz20ydqelm8m1wqla27cc25a2140c8a7e6a1c03a903e3b3e', '0c22343a-d599-4191-ab5a-caa61038559e.jfif', 'administrador', 'Cristian', 'Rojas', '3014860536', 'cristianrojas_123@hotmail.com'),
+(8, 'cosa', 'a1Bz20ydqelm8m1wql1574612a64e746d204acae6e51b7d695', '316280015_700668851658276_7154521546689432496_n.jpg', 'empleado', 'Coca Cola ', 'Arabe', '3148693230', 'cocacola@gmail.com'),
+(9, 'leo', 'a1Bz20ydqelm8m1wqlbad5f33780c42f2588878a9d07405083', 'leonel_messi.png', 'empleado', 'Leonel Andres', 'Messi', '3169897596', 'leonelandres_10@gmail.com'),
+(10, 'Lee', 'a1Bz20ydqelm8m1wql81dc9bdb52d04dc20036dbd8313ed055', 'Screenshot_20221201_091914.png', 'empleado', 'Lee', 'Sin', '654897514', 'lee@yahoo.com'),
+(11, 'Mayetruji', 'a1Bz20ydqelm8m1wql63b47ec117e49a643a6657882cc60024', 'mayerly foto.png', 'administrador', 'Mayerli', 'Trujillo', '3208764334', 'maye.t93@gmail.com'),
+(12, 'Daniel', 'a1Bz20ydqelm8m1wql6e7bc035c10d6d628e9067ae9b034d41', 'lee-sin-lol-knockout-splash-art-uhdpaper.com-hd-802.jpg', 'administrador', 'José Daniel', 'Moncada Hernández', '3222542628', 'jdmoncada37@misena.edu.co'),
+(14, 'ruben', 'a1Bz20ydqelm8m1wql81dc9bdb52d04dc20036dbd8313ed055', '312300685_227214209639511_3125049967828092305_n.jpg', 'administrador', 'Ruben Dario ', 'Cespedes santis', '3014859687', 'rdsantis@gmail.com'),
+(15, 'carlos', 'a1Bz20ydqelm8m1wql81dc9bdb52d04dc20036dbd8313ed055', '297739864_3221584634721921_5264104212420137031_n.jpg', 'empleado', 'Carlos alberto', 'Mora Cruz', '3014859687', 'carlosmora@noleas.com'),
+(16, 'david', 'a1Bz20ydqelm8m1wql39cec6d4d21b5dade7544dab6881423e', '1554330061183.jpg', 'administrador', 'David Hernando', 'Melo Sarmieto', '3197118495', 'david@gmail.com'),
+(17, 'nana', 'a1Bz20ydqelm8m1wql518d5f3401534f5c6c21977f12f60989', '223280420_679896416666369_3739029958559359899_n.jpg', 'administrador', 'Diana Avigail', 'Catro', '+52 1 81 8087 5318', 'avigail@gmail.com');
 
 --
 -- Índices para tablas volcadas
 --
-
---
--- Indices de la tabla `caja`
---
-ALTER TABLE `caja`
-  ADD PRIMARY KEY (`id_caja`);
 
 --
 -- Indices de la tabla `clientes`
@@ -488,60 +590,71 @@ ALTER TABLE `usuario`
 --
 
 --
--- AUTO_INCREMENT de la tabla `caja`
---
-ALTER TABLE `caja`
-  MODIFY `id_caja` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_cliente` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_cliente` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
 --
 -- AUTO_INCREMENT de la tabla `detalles_pedido`
 --
 ALTER TABLE `detalles_pedido`
-  MODIFY `id_detalles` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_detalles` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT de la tabla `empresa`
 --
 ALTER TABLE `empresa`
   MODIFY `id_empresa` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT de la tabla `history_log`
 --
 ALTER TABLE `history_log`
-  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=156;
+  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=213;
+
 --
 -- AUTO_INCREMENT de la tabla `marca`
 --
 ALTER TABLE `marca`
-  MODIFY `id_marca` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_marca` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
 --
 -- AUTO_INCREMENT de la tabla `modelo`
 --
 ALTER TABLE `modelo`
-  MODIFY `id_modelo` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_modelo` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
 --
 -- AUTO_INCREMENT de la tabla `pedidos`
 --
 ALTER TABLE `pedidos`
   MODIFY `id_pedido` int(200) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `id_pro` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_pro` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
 --
 -- AUTO_INCREMENT de la tabla `reparacion`
 --
 ALTER TABLE `reparacion`
-  MODIFY `id_reparacion` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_reparacion` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+--
+-- Base de datos: `test`
+--
+CREATE DATABASE IF NOT EXISTS `test` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `test`;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

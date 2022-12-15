@@ -9,12 +9,21 @@ $con = mysqli_connect($host,$dbuser,$dbpass,$dbname);
 */
 
 //hecho para jlastic
+
 $host = 'node122447-env-2831420.jelastic.saveincloud.net';
 $dbuser = 'root';
 $dbpass = 'GZQfet63329';
 $dbname = 'taller_mecanico';
 $con = mysqli_connect($host,$dbuser,$dbpass,$dbname);
 
+
+/* para para trajar en local 
+$host = 'localhost';
+$dbuser = 'Camilo';
+$dbpass = 'Holamund0';
+$dbname = 'taller_mecanico';
+$con = mysqli_connect($host, $dbuser, $dbpass, $dbname);
+*/
 // Check connection
 if (!$con)
   {

@@ -1,187 +1,188 @@
-<?php 
-$id=$_SESSION['id'];
+<?php
+$id = $_SESSION['id'];
 ?>
 
 <?php
 
 ?>
 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-              <div class="menu_section">
-                <h3>Menu</h3>
-                <ul class="nav side-menu">
-                                   <li><a href = "../layout/inicio.php"><i class="fa fa-dashboard"></i> inicio <span class="fa fa-chevron-right"></span></a></li>
-           
+  <div class="menu_section">
+    <h3>Menu</h3>
+    <ul class="nav side-menu">
+      <li><a href="../layout/inicio.php"><i class="fa fa-dashboard"></i> inicio <span class="fa fa-chevron-right"></span></a></li>
 
 
-                           <?php
-                      if ($tipo=="administrador" ) {
-                    
-                      ?>
-          
-                     
-                                  <?php
-                      }
-                      ?>
 
-                            <?php
- 
-                    
-                      ?>
+      <?php
+      if ($tipo == "administrador") {
 
-                                   <li><a><i class="fa fa-bar-chart"></i> Reparacion<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-<li><a href="../reparacion/reparacion.php">Reparaciones en curso</a></li>
+      ?>
 
-<li><a href="../reparacion/reparacion_concluidas.php">Reparaciones concluidas</a></li>
-<li><a href="../reparacion/reparacion_agregar.php">Nueva reparacion</a></li>
 
+      <?php
+      }
+      ?>
 
+      <?php
 
 
+      ?>
 
-                       
+      <li><a><i class="fa fa-bar-chart"></i> Reparacion<span class="fa fa-chevron-down"></span></a>
+        <ul class="nav child_menu">
+          <li><a href="../reparacion/reparacion.php">Reparaciones en curso</a></li>
 
-                    </ul>
-                  </li>
-                          <li><a><i class="fa fa-database"></i> Repuestos<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-<li><a href="../producto/producto.php">Productos</a></li>
+          <li><a href="../reparacion/reparacion_concluidas.php">Reparaciones concluidas</a></li>
+          <li><a href="../reparacion/reparacion_agregar.php">Nueva reparacion</a></li>
 
 
 
 
 
-                       
 
-                    </ul>
-                  </li>
 
+        </ul>
+      </li>
+      <li><a><i class="fa fa-database"></i> Repuestos<span class="fa fa-chevron-down"></span></a>
+        <ul class="nav child_menu">
+          <li><a href="../producto/producto.php">Productos</a></li>
 
-                                            <li><a><i class="fa fa-user"></i> Clientes<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-<li><a href="../cliente/cliente.php">cliente</a></li>
 
 
 
 
 
-                       
 
-                    </ul>
-                  </li>
+        </ul>
+      </li>
 
-                          <li><a><i class="fa fa-automobile"></i> Marca vehiculo<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-<li><a href="../marca/marca.php">marca</a></li>
-<li><a href="../modelo/modelo.php">Modelo</a></li>
 
+      <li><a><i class="fa fa-user"></i> Clientes<span class="fa fa-chevron-down"></span></a>
+        <ul class="nav child_menu">
+          <li><a href="../cliente/cliente.php">cliente</a></li>
 
 
 
 
-                       
 
-                    </ul>
-                  </li>
-    
-                                  <?php
-        
-                      ?>
-                    
-                
 
 
+        </ul>
+      </li>
 
+      <li><a><i class="fa fa-automobile"></i> Marca vehiculo<span class="fa fa-chevron-down"></span></a>
+        <ul class="nav child_menu">
+          <li><a href="../marca/marca.php">marca</a></li>
+          <li><a href="../modelo/modelo.php">Modelo</a></li>
 
 
 
-             
-                 
-         
 
 
 
 
+        </ul>
+      </li>
 
+      <?php
 
+      ?>
 
 
 
-                                   <li><a><i class="fa fa-bar-chart"></i> Reportes<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-<li><a href="../reportes/reportes_por_fecha.php">Reporte entre fechas</a></li>
-<li><a href="../reportes/reportes_por_dia.php">Reporte dia</a></li>
-<li><a href="../reportes/reportes_ultimos_7dias.php">Reporte ultimos 7 dias</a></li>
 
 
 
 
-                       
 
-                    </ul>
-                  </li>
 
 
 
 
 
 
-           
 
 
+<!--
 
 
-                      
 
+      <li><a><i class="fa fa-bar-chart"></i> Reportes<span class="fa fa-chevron-down"></span></a>-->
+        <ul class="nav child_menu">
+          <li><a href="../reportes/reportes_por_fecha.php">Reporte entre fechas</a></li>
+          <li><a href="../reportes/reportes_por_dia.php">Reporte dia</a></li>
+          <li><a href="../reportes/reportes_ultimos_7dias.php">Reporte ultimos 7 dias</a></li>
 
 
 
-       
-          
-                   <?php
-                      if ($tipo=="administrador" ) {
-                    
-                      ?>
-             <li><a href = "../usuario/usuario.php"><i class="fa fa-user"></i> Usuario<span class="fa fa-chevron-right"></span></a>
+
+
+
+        </ul>
+      </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <?php
+      if ($tipo == "administrador") {
+
+      ?>
+        <li><a href="../usuario/usuario.php"><i class="fa fa-user"></i> Usuario<span class="fa fa-chevron-right"></span></a>
 
 
         <?php
-                      }
-                      ?>
+      }
+        ?>
 
-                             <?php
-                      if ($tipo=="administrador" ) {
-                    
-                      ?>
+        <?php
+        if ($tipo == "administrador") {
 
-                 <li><a><i class="fa fa-gear"></i> Configuracion<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
+        ?>
 
-                      <li><a href="../configuracion/configuracion.php">Empresa</a></li>
-       
-                       
+        <li><a><i class="fa fa-gear"></i> Configuracion<span class="fa fa-chevron-down"></span></a>
+          <ul class="nav child_menu">
 
-                    </ul>
-                  </li>
+            <li><a href="../configuracion/configuracion.php">Empresa</a></li>
 
 
-                     <li><a><i class="fa fa-database"></i> Base de datos<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
 
-                      <li><a href="../otros/vaciar_bd.php" onClick="return confirm('¿Está seguro de que quieres vaciar la base de datos ??');">Vaciar base de datos</a></li>
-       
-                       <li><a href="../otros/respaldo_add.php">Respaldo</a></li>
+          </ul>
+        </li>
 
-                    </ul>
-                  </li>
-             <?php
-                      }
-                      ?>
+<!--
+        <li><a><i class="fa fa-database"></i> Base de datos<span class="fa fa-chevron-down"></span></a>
+          <ul class="nav child_menu">
+
+            <li><a href="../otros/vaciar_bd.php" onClick="return confirm('¿Está seguro de que quieres vaciar la base de datos ??');">Vaciar base de datos</a></li>
+
+            <li><a href="../otros/respaldo_add.php">Respaldo</a></li>
+
+          </ul>
+        </li>
+-->        
+      <?php
+        }
+      ?>
 
 
-                   
-              </div>
-             <!--- <div class="menu_section">
+
+  </div>
+  <!--- <div class="menu_section">
                 <h3>Live On</h3>
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
@@ -224,4 +225,4 @@ $id=$_SESSION['id'];
                 </ul>
               </div>--->
 
-            </div>
+</div>
