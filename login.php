@@ -287,7 +287,7 @@ $pass=md5($pass1);
 $salt="a1Bz20ydqelm8m1wql";
 $pass=$salt.$pass;
 
-date_default_timezone_set('Asia/Manila');
+date_default_timezone_set('America/Bogota');
 
 $date = date("Y-m-d H:i:s");
 // aca hace la consulta de sql para la base de datos 
