@@ -25,6 +25,7 @@ $dbname = 'taller_mecanico';
 $con = mysqli_connect($host, $dbuser, $dbpass, $dbname);
 */
 // Check connection
+
 if (!$con)
   {
   die("Failed to connect to MySQL: " . mysql_error());
